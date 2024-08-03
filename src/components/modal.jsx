@@ -36,7 +36,7 @@ const Modal = ({ isOpen, onClose }) => {
         formData.append('public_id', title); // Use title as public ID
 
         try {
-            await axios.post('https://backend-images-seven.vercel.app/upload/', formData, {
+            await axios.post('https://backend-images-seven.vercel.app/upload', formData, {
                 headers: {
                     'Content-Type': 'multipart/form-data',
                 },
