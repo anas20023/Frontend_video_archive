@@ -6,7 +6,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
 const VideoSlider = ({ videos }) => {
-  console.log('Slider rendered');
+ // console.log('Slider rendered');
 
   const settings = {
     dots: true,

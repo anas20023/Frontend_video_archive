@@ -27,7 +27,7 @@ const Time = () => {
     const seconds = time.getSeconds().toString().padStart(2, '0');
 
     return (
-        <h1 className="font-bold text-base bg-white px-4 py-2 rounded text-red-600">
+        <h1 className="font-bold text-base text-white px-4 py-2 rounded bg-gradient-to-r from-red-600 to-rose-600">
             {date + 31} {month}  {hours}:{minutes}:{seconds}
         </h1>
     );

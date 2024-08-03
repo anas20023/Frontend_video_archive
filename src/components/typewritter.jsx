@@ -1,12 +1,11 @@
 /* eslint-disable no-unused-vars */
 import React, { useState, useEffect, useCallback } from 'react';
 
-const quotes = [
-    "এক দফা এক দাবি , হাসিনা তুই আজই যাবি",
-    "জীবন হল যখন আপনি অন্য পরিকল্পনা তৈরির জন্য ব্যস্ত থাকেন।",
-    "আমাদের আগামীকালের বাস্তবায়নের একমাত্র সীমা হলো আমাদের আজকের সন্দেহ।",
-    "শেষে, আমরা আমাদের শত্রুদের কথা মনে রাখবো না, বরং আমাদের বন্ধুদের নিরবতা মনে রাখবো।",
-    "আমাদের জীবনের উদ্দেশ্য হলো সুখী হওয়া।"
+const slogans = [
+    "দফা এক দাবি এক , খুনি হাসিনার পদত্যাগ ☝️✊",
+    "আপোষ না সংগ্রাম ? , সংগ্রাম সংগ্রাম ✊",
+    "আমার ভাইয়ের রক্ত বৃথা যেতে দেবো না",
+    "তোর কোটা তুই নে , আমার ভাইদের ফিরিয়ে দে ",
 ];
 
 const Typewriter = () => {
@@ -15,12 +14,12 @@ const Typewriter = () => {
     const [charIndex, setCharIndex] = useState(0);
 
     const typewriterEffect = useCallback(() => {
-        if (index >= quotes.length) {
+        if (index >= slogans.length) {
             setIndex(0);
             return;
         }
 
-        const quote = quotes[index];
+        const quote = slogans[index];
 
         if (charIndex < quote.length) {
             const timeoutId = setTimeout(() => {
@@ -34,7 +33,7 @@ const Typewriter = () => {
                 setCurrentQuote("");
                 setCharIndex(0);
                 setIndex(prev => prev + 1);
-            }, 2000); // Adjust pause duration between quotes here
+            }, 2000); // Adjust pause duration between slogans here
 
             return () => clearTimeout(timeoutId);
         }
@@ -45,9 +44,7 @@ const Typewriter = () => {
     }, [typewriterEffect]);
 
     return (
-        <div className='mt-10 w-full max-w-2xl mx-auto flex justify-center items-center font-[Tiro Bangla]'>
-            <h2 className="text-4xl max-w-2xl px-4 text-center">{currentQuote}</h2>
-        </div>
+        <h2 className="text-lg lg:text-3xl text-center my-6 text-green-600 font-bold font-[Tiro Bangla]">{currentQuote}</h2>
     );
 };
 
